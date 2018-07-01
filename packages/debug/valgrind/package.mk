@@ -28,7 +28,7 @@ PKG_SECTION="debug"
 PKG_SHORTDESC="A tool to help find memory-management problems in programs"
 PKG_LONGDESC="A tool to help find memory-management problems in programs"
 
-if [ "$TARGET_ARCH" = "arm" ]; then
+if [ "$TARGET_ARCH" = "arm" -o "$TARGET_ARCH" = "i386" ]; then
   PKG_CONFIGURE_OPTS_TARGET="--enable-only32bit"
 elif [ "$TARGET_ARCH" = "aarch64" -o "$TARGET_ARCH" = "x86_64" ]; then
   PKG_CONFIGURE_OPTS_TARGET="--enable-only64bit"

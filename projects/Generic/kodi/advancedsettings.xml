@@ -1,4 +1,5 @@
 <advancedsettings>
+  <loglevel>2</loglevel>
   <cputempcommand>cputemp</cputempcommand>
   <gputempcommand>gputemp</gputempcommand>
   <video>

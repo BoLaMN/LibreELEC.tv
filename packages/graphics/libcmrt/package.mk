@@ -1,6 +1,7 @@
+
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
-#      Copyright (C) 2009-2014 Stephan Raue (stephan@openelec.tv)
+#      Copyright (C) 2009-2016 Stephan Raue (stephan@openelec.tv)
 #
 #  OpenELEC is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -16,17 +17,16 @@
 #  along with OpenELEC.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-# PATH
-for addon in /storage/.kodi/addons/*/bin /usr/lib/kodi/addons/*/bin; do
-  [ -d "$addon" ] && PATH="$PATH:$addon"
-done
-export PATH
-
-# LD_LIBRARY_PATH
-for addon in /storage/.kodi/addons/*/lib /usr/lib/kodi/addons/*/lib; do
-  [ -d "$addon" ] && LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$addon"
-done
-export LD_LIBRARY_PATH
-
-export MESA_GL_VERSION_OVERRIDE=2.1
-export LIBGL_ALWAYS_SOFTWARE=1
+PKG_NAME="libcmrt"
+PKG_VERSION="1.0.6"
+PKG_SHA256="ca22e905a2717fc740e703e65a0061a0e11f4ea513ba970bbc10b3bd6d28e6e0"
+PKG_ARCH="i386"
+PKG_LICENSE="MIT"
+PKG_SITE="https://github.com/intel/cmrt/"
+PKG_URL="https://github.com/intel/cmrt/archive/$PKG_VERSION.tar.gz"
+PKG_DEPENDS_TARGET="libva"
+PKG_SECTION="graphics"
+PKG_SOURCE_DIR="cmrt-$PKG_VERSION"
+PKG_SHORTDESC="libcmrt: C for Media Runtime"
+PKG_LONGDESC="C for Media Runtime."
+PKG_TOOLCHAIN="autotools"

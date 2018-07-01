@@ -77,7 +77,7 @@ pre_configure_target() {
   fi
 
   # Generic
-  if [[ "$TARGET_ARCH" = "x86_64" ]]; then
+  if [[ "$TARGET_ARCH" = "x86_64" -o "$TARGET_ARCH" = "i386" ]]; then
     PKG_FFMPEG_HW_ENCODERS_GENERIC="\
     `#Video encoders` \
     --enable-encoder=h264_nvenc \
